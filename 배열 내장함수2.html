@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열 내장함수2</title>
+</head>
+<body>
+  sort() : 알파벳 순으로 요소 정렬
+  reverse() : 역순으로 요소 정렬
+  sort((a,b)=> {return a-b}) : 올림차순으로 요소 정렬
+  sort((a,b)=> {return b-a}) : 내림차순으로 요소 정렬
+  sort((a,b)=> {return a-b})[0] : 최소값 반환
+  sort((a,b)=> {return b-a})[0] : 최대값 반환
+
+  <script>
+    const names = ["Amily", "Rose", "Jennie", "Lisa"];
+    // names.sort();
+    names.reverse();
+    console.log(names);
+
+    const nums = [5,3,20,50,30]
+    // nums.sort(function(a,b){
+    //   return a-b;
+    // });
+    // console.log(nums);
+
+    //위의 코드 간소화
+    nums.sort((a,b)=>{return b-a});
+    console.log(nums);
+    console.log(nums[0]);
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+</head>
+<body>
+  함수(function)
+  - 자주쓰는 실행코드들을 블록단위로 묶어서 패키징 해놓은 형태
+  - 자주쓰는 코드들을 기능단위로 재사용하기 위함
+  - 함수 정의 : 미리 fuxtion키워드를 이용해서 자주 쓸 코드들을 묶어서 정의하는 행위
+  - 함수 호출 : 정의되어 있는 함수를 호출을 해야지만 비로서 기능이 실행됨
+
+  함수의 종류
+  - 선언적 함수 : 함수에 미리 이름을 붙여서 정의해 놓은 형태
+    자바스크립트 파일을 읽을 때 선언적 함수를 우선적으로 읽어줌
+
+  익명함수
+  - 함수에 이름이 없이 정의하는 형태
+  - 익명함수 자체만으로는 호출이 불가능
+  - 변수에 익명함수를 대입하거나 특정 이벤트 객체에 대입하는 식으로 호출가능
+
+  대입형 함수
+  - 변수에 익명함수가 대입된 형태
+
+  즉시실행함수
+  - 함수가 자기자신을 정의하자마자 바로 자신을 호출
+
+  <script>
+    // 선언 함수
+    function plus(){
+      const num1 = 2;
+      const num2 = 3;
+      console.log(num1+num2);
+    }
+    plus();
+
+    // 익명함수
+    const addNum = function(){
+      const num3 = 4;
+      const num4 = 5;
+      console.log(num3+num4);
+    }
+    addNum();
+
+    // 즉시실행 함수
+    (function(){
+      const num5 = 5;
+      const num6 = 6;
+      console.log(num5+num6);
+    })();
+  </script>
+</body>
+</html>

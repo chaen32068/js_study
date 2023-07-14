@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비구조화 할당(구조분해 할당)</title>
+</head>
+<body>
+  <script>
+    const names = ["David", "Andy", "Tom", "Michael"]
+    // const name1 = names[0];
+    // const name2 = names[1];
+    // const name3 = names[2];
+    // const name4 = names[3];
+    // console.log(name1);
+
+    // 위의 코드 간소화
+    const [name1, name2, name3, name4] = names;
+    console.log(names[0]);
+
+    
+    const studA = {
+      name : "David",
+      age: 20,
+      isFemale : false,
+      hobby : "reading"
+    }
+    const {name, age, isFemale, hobby} = studA;
+    console.log(age)
+  </script>
+</body>
+</html>

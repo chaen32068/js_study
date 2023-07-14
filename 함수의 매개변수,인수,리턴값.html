@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  함수 매개변수(parameter)
+  - 함수 외부에서 함수 내부로 특정값을 전달하기 위한 통로 이름
+
+  인수(argument)
+  - 함수를 호출할 때 파라미터를 통해서 전달되는 값
+
+  반환값(return)
+  - 함수 내부에서 만들어진 값을 함수 호출 시 외부로 반환
+  - 함수구문 실행 도중 특정시점에서 강제로 코드를 실행중단 될 때
+
+  <script>
+    function plus(num1, num2){
+      //plus 함수 안에있는 num1, num2가 매개변수
+      const result = num1 + num2;
+      return result; // return 안쓰면 반환 안됨.
+    }
+
+    const total = plus(3,5);
+    console.log(total);
+    //plus함수에 삽입되는 값 : 인수
+
+
+    //같은 내용을 화살표 함수로 변환(기존 함수 축약한 형태)
+    //매개변수가 하나면 괄호 생략 가능
+
+    const plus = (num1,num2)=>{
+      const result = num1 + num2;
+      return result;
+    }
+
+    const total = plus(5,7);
+    console.log(total);
+  </script>
+</body>
+</html>

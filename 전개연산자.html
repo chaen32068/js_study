@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전개 연산자</title>
+</head>
+<body>
+  <script>
+    let arr = ["red", "green", "blue"];
+    let arr2 = ["orange", ...arr, "pink"]; //배열 복사 : ...(변수)
+    console.log(arr2);
+
+
+    let hobby = ["game", "sports", "reading"];
+    let hobby2 = ["dance", "swim", "climing"];
+    let newHobby = [...hobby, ...hobby2];
+    console.log(newHobby);
+
+
+    let defaults = {
+      color : "gray",
+      hobby : "nap",
+      address : "nowhere"
+    }
+    let customs = {
+      color : "hotpink",
+      address : "seoul"
+    }
+    let newObj = {...defaults, ...customs};
+    console.log(newObj);
+  </script>
+</body>
+</html>

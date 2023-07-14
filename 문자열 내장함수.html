@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문자열 내장함수</title>
+</head>
+<body>
+  문자열.length : 문자열의 길으를 반환
+  문자열.indexof() : 찾고자 하는 문자열의 위치 반환
+  문자열.slice() : 문자열에서 특정 부분을 추출해서 새로운 문자열로 반환
+  문자열.substr() : 문자열에서 특정 부분을 잘라냄
+  문자열.replace() : 문자열에서 특정 문자값을 바꿔치기
+  문자열.split() : 문자열을 배열로 변환
+
+  <script>
+    const txt = "Hello World";
+    console.log(txt.length);
+    console.log(txt.indexOf("Wo"));
+
+    const txt2 = txt.slice(0, 5);
+    console.log(txt2);
+
+    const txt3 = txt.substr(1,2);
+    console.log(txt3);
+
+    const origin = "학교종이 땡땡땡 어서 모이자 선생님이 우리를 waite 하신다 스웩"
+    let result = "";
+    
+    if(origin.length > 15){
+      result = origin.substr(0, 15) + "...";
+    } else {
+      result = origin;
+    }
+
+    //if문을 '삼항연산자'로 변환
+    //앞의 조건식이 참이면(?) 뒤의 코드가 실행, 거짓이면 뒤의(:) 코드 실행
+    (origin.length > 15) ? result = origin.substr(0, 15) + "..." : result = origin;
+    console.log(result);
+
+    let introduce = "우리 ABC회사는 높은 품질의 제품을 만들고 있으며 ABC라는 회사 브랜드 가치를 높이기 위해서 노력하고 있습니다. 앞으로 우리 ABC회사 제품을 많이 애용해주세요.";
+
+    //전체 내용에서 abc를 bbc로 변경한다 => /ABC/ig (i는 대소문자 구분)
+    const changeName = introduce.replace(/ABC/ig, "BBC"); 
+    console.log(changeName);
+
+    const colors = "red,green,pink";
+    const arr = colors.split(",");
+    console.log(arr);
+  </script>
+</body>
+</html>
